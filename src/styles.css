@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; width: 100%; height: 100%; font-family: Tahoma, Arial, sans-serif; }
+button { font: inherit; }
+
+/* XP */
+.xp-desktop {
+  height: 100%;
+  background: linear-gradient(#74b2ff 0%, #97d26f 55%, #5eaf3f 100%);
+  position: relative;
+  padding-bottom: 42px;
+}
+.xp-icons-column { display: flex; flex-direction: column; gap: 12px; padding: 14px; width: 140px; }
+.xp-icon {
+  border: 1px solid transparent; background: transparent; color: white; display: flex; flex-direction: column;
+  align-items: center; width: 100px; padding: 6px; text-shadow: 1px 1px #1b3e7a;
+}
+.xp-icon:hover { background: rgba(36, 94, 219, 0.4); border-color: #a5c7ff; }
+.xp-icon-link { text-decoration: none; }
+.xp-icon-image {
+  width: 34px; height: 34px; border-radius: 6px; margin-bottom: 4px;
+  background: linear-gradient(#fefefe, #b7cdfa); border: 1px solid #4f71c9;
+}
+.xp-taskbar {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 42px; display: flex; align-items: center;
+  justify-content: space-between; background: linear-gradient(#3f90ff, #245edb);
+  border-top: 1px solid #8eb7ff; padding: 0 8px;
+}
+.xp-start {
+  color: white; font-weight: 700; border-radius: 20px; border: 1px solid #2f7822;
+  background: linear-gradient(#68cb4b, #3d992f); padding: 5px 16px;
+}
+.xp-start:active, .xp-action:active, .xp-link-btn:active { transform: translateY(1px); }
+.xp-clock { color: white; background: rgba(10, 30, 98, 0.4); padding: 4px 8px; border-radius: 4px; }
+
+.xp-window-overlay { position: absolute; inset: 0; display: grid; place-items: center; }
+.xp-window { border: 1px solid #1947a1; background: #f7f9ff; box-shadow: 2px 2px 0 #0b2f7c; }
+.xp-titlebar {
+  display: flex; align-items: center; justify-content: space-between; color: white;
+  background: linear-gradient(#4b8ef5, #245edb); padding: 5px 7px;
+}
+.xp-close-btn {
+  border: 1px solid #8e0f0f; background: #df2f2f; color: white; width: 22px; height: 22px; font-weight: 700;
+}
+.xp-content { background: white; padding: 14px; max-height: 70vh; overflow: auto; }
+.xp-action, .xp-link-btn { border: 1px solid #6f8ac9; background: #eceffd; padding: 6px 10px; }
+.xp-link-btn { text-decoration: underline; cursor: pointer; }
+.xp-preview-box { border: 1px dashed #7b90b9; padding: 10px; background: #f2f7ff; margin-bottom: 10px; }
+pre { background: #f4f4f4; border: 1px solid #ccc; padding: 8px; overflow: auto; }
+
+/* iOS */
+.ios-shell {
+  height: 100%;
+  background: linear-gradient(#1f334f, #0b1525);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.ios-slider {
+  flex: 1;
+  display: flex;
+  width: 200%;
+  transform: translateX(0%);
+  transition: transform 0.25s linear;
+}
+.ios-screen-home { transform: translateX(0%); }
+.ios-screen-about, .ios-screen-java, .ios-screen-snake { transform: translateX(-50%); }
+.ios-page { width: 50%; padding: 20px; overflow: auto; }
+.ios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.ios-icon {
+  position: relative;
+  border: 1px solid #8090a5;
+  border-radius: 22px;
+  min-height: 72px;
+  color: white;
+  background: linear-gradient(#5f8ad4, #20498c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+}
+.ios-icon-shine {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  height: 45%;
+  border-radius: 20px 20px 12px 12px;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0));
+}
+.ios-dock {
+  height: 84px;
+  border-top: 1px solid #7f8fa5;
+  background: linear-gradient(rgba(250,250,250,0.35), rgba(180,180,180,0.2));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ios-dock-icon {
+  min-width: 76px;
+  min-height: 56px;
+  border: 1px solid #8998b1;
+  border-radius: 16px;
+  background: linear-gradient(#4c5f7d, #1f2a3d);
+  color: #fff;
+}
+.ios-back {
+  border: 1px solid #95b0dd;
+  background: #35598f;
+  color: white;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+}
